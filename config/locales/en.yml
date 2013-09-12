@@ -1,0 +1,18 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  hello: "Hello world"
+  
+  activerecord:
+    attributes:
+#     spree/*
+    models:
+#     spree/*
+    errors:
+      models:
+#       spree/*      
+      
+# See 'spree_core-2.0.4/config/locales/en.yml' for more examples
+  spree:
+    shopping_cart: Doug's Shopping Cart - Yea baby!

@@ -1,0 +1,21 @@
+<th class="cart-item-description-header" colspan="2"><%= Spree.t(:item) %></th>
+
+      <%# render :partial => 'line_item', :locals => { :variant => item_form.object.variant, :line_item => item_form.object, :item_form => item_form } %>
+
+<%# line_item_description(item_form.object.variant) %>
+
+ <%# --- IMAGE --- %>
+  <td class="cart-item-image" data-hook="cart_item_image">
+    <% if item_form.object.variant.images.length == 0 %>
+      <%= link_to small_image(item_form.object.variant.product), item_form.object.variant.product %>
+    <% else %>
+      <%= link_to image_tag(item_form.object.variant.images.first.attachment.url(:small)), item_form.object.variant.product %>
+    <% end %>
+  </td>
+
+  <%# --- DELETE OPTION --- %>
+  <td class="cart-item-delete" data-hook="cart_item_delete">
+    <%= link_to image_tag('icons/delete.png'), '#', :class => 'delete', :id => "delete_#{dom_id(item_form.object)}" %>
+  </td>
+  
+  
