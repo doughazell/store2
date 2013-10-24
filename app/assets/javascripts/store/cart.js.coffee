@@ -14,3 +14,6 @@ Spree.ready ($) ->
     ($ this).parents('form').submit()
     
   #($ '#romancart-link').click()
+  
+  # Interesting that calling 'submit()' directly didn't work...
+  #($ this).parents('form').submit()

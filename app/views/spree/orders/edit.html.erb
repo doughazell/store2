@@ -11,8 +11,8 @@
 
 <% else %>
   <div data-hook="outside_cart_form">
-    <%# form_for @order, :url => update_cart_path, :html => {:id => 'update-cart'} do |order_form| %>
-    <%= form_for @order, :url => "http://www.romancart.com/cart.asp", :html => {:id => 'update-cart'} do |order_form| %>
+    <%= form_for @order, :url => update_cart_path, :html => {:id => 'update-cart'} do |order_form| %>
+    <%# form_for @order, :url => "http://www.romancart.com/cart.asp", :html => {:id => 'update-cart'} do |order_form| %>
 
       <div data-hook="inside_cart_form">
 
@@ -33,11 +33,11 @@
           <%= button_tag :class => 'primary', :id => 'update-button' do %>
             <%= Spree.t(:update) %>
           <% end %>
-          <%# button_tag :class => 'button checkout primary', :id => 'checkout-link', :name => 'checkout' do %>
-          <%= button_tag :class => 'button checkout primary', :id => 'romancart-link', :name => 'checkout' do %>
+          <%= button_tag :class => 'button checkout primary', :id => 'checkout-link', :name => 'checkout' do %>
+          <%# button_tag :class => 'button checkout primary', :id => 'romancart-link', :name => 'checkout' do %>
             
-On our way to Romancart, you beauty...
-            <%# Spree.t(:checkout) %>
+<%# On our way to Romancart, you beauty... %>
+            <%= Spree.t(:checkout) %>
 
           <% end %>
         </div>
